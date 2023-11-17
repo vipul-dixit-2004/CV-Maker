@@ -1,8 +1,8 @@
 {
+  "homepage": "https://vipul-dixit-2004.github.io/CV-Maker/",
   "name": "cvprototype",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://vipul-dixit-2004.github.io/CV-Maker/",
   "type": "module",
   "scripts": {
     "predeploy":"npm run build",
