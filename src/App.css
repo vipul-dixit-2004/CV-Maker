@@ -24,8 +24,12 @@
 .personalInfo>h1{
 margin-top: 7px;
 }
-.personalInfo>h1,.profile{
+.text-con,.profile{
   padding: 20px;
+}
+.text-con>h3{
+  margin-left: 10px;
+  color:antiquewhite;
 }
 .profileImg{
   height: 60px;
@@ -43,9 +47,14 @@ margin-top: 7px;
 }
 .content{
   background-color: antiquewhite;
-  height: 70vh;
+  height: 80vh;
 }
 .details{
   padding: 10px;
   color: black;
+}
+.job-section,.qualification-section{
+margin: 5px 0 20px 70px ;
+font-family: serif;
+font-size: 16px;
 }
