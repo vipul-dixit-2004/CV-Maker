@@ -1,8 +1,6 @@
 import { useState } from "react";
 import profileLogo from '../assets/profile.png';
-function getInput(nameName,exception){
-    return nameName.length===0?exception:nameName
-}
+import CvGenerated from './CvGenerated';
 function InputSection(){
     const [nameInp,setName] = useState('')
     const [emailInp,setEmail] = useState('')
@@ -31,38 +29,7 @@ return (
     <input type="file" name="imgInp" onChange={(e)=>setImg(e.target.value)}/>
 </form>
 </div>
-<div className="outputSec">
-    <div className="CV">
-        <div className="heading">
-        <div className="personalInfo">
-            <div class="text-con">
-            <h1>{getInput(nameInp,"Your Name")}</h1>
-            <h3>{getInput(jobPostInp,"(Post)")}</h3>
-            </div>
-        </div>
-        <div className="profile">
-            <img src={imgInp} height={"200px"}  className="profileImage rounded float-end" alt="ProfilePhoto"/>
-        </div>
-        </div>
-        <div className="bulletins">
-        <span>📱 :{getInput(mobInp,"1234567890")}</span>
-        <span>📧 : {getInput(emailInp,"example@xyz.com")}</span>
-        </div>
-        <div className="content">
-            <div className="details">
-                <h2>Job Experiences</h2>
-                <div class="job-section">
-                    <pre>{getInput(jobInp,"Your job descriptions displays here......")}</pre>
-                </div>
-                <h2>Qualifications</h2>
-                <div className="qualification-section">
-                    <pre>{getInput(qualifiInp,"Your all Qualifications goes here.....")}</pre>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
+<CvGenerated nameInp={nameInp} jobPostInp={jobPostInp} jobInp={jobInp} profileLogo={profileLogo} mobInp={mobInp} emailInp={emailInp} qualifiInp={qualifiInp}/>
 </div>
 
 )
